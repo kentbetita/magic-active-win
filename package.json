@@ -42,6 +42,7 @@
 		"lib",
 		"main",
 		"Sources/windows/main.cc",
+		"Sources/ActiveWinCLI/main.swift",
 		"binding.gyp"
 	],
 	"keywords": [
