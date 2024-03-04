@@ -1,17 +1,14 @@
 {
-	"name": "active-win",
-	"version": "8.2.1",
-	"description": "Get metadata about the active window (title, id, bounds, owner, URL, etc)",
+	"name": "magic-active-win",
+	"version": "1.0.0",
+	"description": "Get metadata about the active window.",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sindresorhus/active-win.git"
+		"url": "git+https://github.com/kentbetita/magic-active-win.git"
 	},
-	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "https://sindresorhus.com"
+		"name": "Kent Betita"
 	},
 	"sideEffects": false,
 	"engines": {
@@ -22,7 +19,7 @@
 	"binary": {
 		"module_name": "node-active-win",
 		"module_path": "./lib/binding/napi-{napi_build_version}-{platform}-{libc}-{arch}",
-		"host": "https://github.com/sindresorhus/active-win/releases/download/",
+		"host": "https://github.com/kentbetita/magic-active-win/releases/download/",
 		"remote_path": "v{version}",
 		"package_name": "napi-{napi_build_version}-{platform}-{libc}-{arch}.tar.gz",
 		"napi_versions": [
