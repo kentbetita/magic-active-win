@@ -72,14 +72,14 @@ func getWindowInformation(window: [String: Any], windowOwnerPID: pid_t) -> [Stri
 	]
 
 	// Run the AppleScript to get the URL if the active window is a compatible browser and accessibility permissions are enabled.
-	if
-		!disableAccessibilityPermission,
-		let bundleIdentifier = app.bundleIdentifier,
-		let script = getActiveBrowserTabURLAppleScriptCommand(bundleIdentifier),
-		let url = runAppleScript(source: script)
-	{
-		output["url"] = url
-	}
+	// if
+	// 	!disableAccessibilityPermission,
+	// 	let bundleIdentifier = app.bundleIdentifier,
+	// 	let script = getActiveBrowserTabURLAppleScriptCommand(bundleIdentifier),
+	// 	let url = runAppleScript(source: script)
+	// {
+	// 	output["url"] = url
+	// }
 
 	return output
 }
@@ -89,12 +89,12 @@ let disableScreenRecordingPermission = CommandLine.arguments.contains("--no-scre
 let enableOpenWindowsList = CommandLine.arguments.contains("--open-windows-list")
 
 // Show accessibility permission prompt if needed. Required to get the URL of the active tab in browsers.
-if !disableAccessibilityPermission {
-	if !AXIsProcessTrustedWithOptions(["AXTrustedCheckOptionPrompt": true] as CFDictionary) {
-		print("active-win requires the accessibility permission in “System Settings › Privacy & Security › Accessibility”.")
-		exit(1)
-	}
-}
+// if !disableAccessibilityPermission {
+// 	if !AXIsProcessTrustedWithOptions(["AXTrustedCheckOptionPrompt": true] as CFDictionary) {
+// 		print("active-win requires the accessibility permission in “System Settings › Privacy & Security › Accessibility”.")
+// 		exit(1)
+// 	}
+// }
 
 // Show screen recording permission prompt if needed. Required to get the complete window title.
 if
