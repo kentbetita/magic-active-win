@@ -28,8 +28,8 @@
 		]
 	},
 	"scripts": {
-		"test": "xo && npm run build:macos && ava && tsd",
-		"test-ci": "xo && tsd",
+		"test": "npm run build:macos && ava && tsd",
+		"test:ci": "tsd",
 		"build:windows:install": "node-pre-gyp install --fallback-to-build",
 		"build:windows": "node-pre-gyp build",
 		"build:windows:debug": "node-pre-gyp build --debug",
@@ -75,10 +75,11 @@
 		"brave"
 	],
 	"devDependencies": {
+		"@types/node": "^20.11.24",
 		"ava": "^2.4.0",
-		"tsd": "^0.14.0",
-		"xo": "^0.38.2",
-		"node-pre-gyp-github": "^1.4.4"
+		"node-pre-gyp-github": "^1.4.4",
+		"tsd": "^0.30.7",
+		"typescript": "^5.3.3"
 	},
 	"optionalDependencies": {
 		"@mapbox/node-pre-gyp": "^1.0.10",
