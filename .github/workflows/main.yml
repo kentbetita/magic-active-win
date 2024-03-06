@@ -2,10 +2,10 @@ name: Test
 on:
   push:
     branches-ignore:
-      - "releases/**"
+      - 'releases/**'
   pull_request:
     branches-ignore:
-      - "releases/**"
+      - 'releases/**'
 jobs:
   test:
     name: Node.js ${{ matrix.node-version }}
@@ -24,4 +24,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install --ignore-scripts
       - run: npm run build:macos
-      - run: npm run test
+      - run: npm run test:ci

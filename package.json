@@ -29,6 +29,7 @@
 	},
 	"scripts": {
 		"test": "npm run build:macos && ava && tsd",
+		"test:ci": "tsd",
 		"build:windows:install": "node-pre-gyp install --fallback-to-build",
 		"build:windows": "node-pre-gyp build",
 		"build:windows:debug": "node-pre-gyp build --debug",
