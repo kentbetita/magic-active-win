@@ -71,6 +71,8 @@ func getWindowInformation(window: [String: Any], windowOwnerPID: pid_t) -> [Stri
 		"memoryUsage": window[kCGWindowMemoryUsage as String] as? Int ?? 0
 	]
 
+	// * Commented the script below as we don't need the `url` property and to prevent retrieving it and running the apple script.
+
 	// Run the AppleScript to get the URL if the active window is a compatible browser and accessibility permissions are enabled.
 	// if
 	// 	!disableAccessibilityPermission,
@@ -87,6 +89,8 @@ func getWindowInformation(window: [String: Any], windowOwnerPID: pid_t) -> [Stri
 let disableAccessibilityPermission = CommandLine.arguments.contains("--no-accessibility-permission")
 let disableScreenRecordingPermission = CommandLine.arguments.contains("--no-screen-recording-permission")
 let enableOpenWindowsList = CommandLine.arguments.contains("--open-windows-list")
+
+// * Commented the guard below so that we don't get the accessibility permission prompt.
 
 // Show accessibility permission prompt if needed. Required to get the URL of the active tab in browsers.
 // if !disableAccessibilityPermission {
